@@ -11,13 +11,13 @@ public class NaturalLogarithm implements Function<Double, Double> {
     }
 
     public NaturalLogarithm() {
-        this(5);
+        this(10);
     }
 
     @Override
     public Double apply(Double x) {
         double result = 0;
-        for (int k = 1; k <= N; k++) result += Math.pow(-1, k - 1) * Math.pow(x - 1, k) / k;
+        for (int k = 1; k <= N; k++) result += Math.pow(-1, k + 1) * Math.pow(x - 1, k) / k;
         return result;
     }
 }

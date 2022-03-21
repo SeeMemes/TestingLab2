@@ -10,7 +10,7 @@ public class Sine implements Function<Double, Double> {
     }
 
     public Sine() {
-        this(5);
+        this(10);
     }
 
     private int fact(int n, int res) {
@@ -18,17 +18,14 @@ public class Sine implements Function<Double, Double> {
         else return fact(n - 1, res * n);
     }
 
-    private Double normalize( Double x ) {
-        x = x % ( -2 * Math.PI );
-        if ( x > 0 ) x -= 2 * Math.PI;
-        return x;
-    }
-
     @Override
     public Double apply(Double x) {
-        x = normalize(x);
+        x = x % (2 * Math.PI);
+
         double result = 0;
-        for (int k = 0; k <= N; k++) result += Math.pow(-1, k) * Math.pow(x, 2 * k + 1) / fact(2 * k + 1, 1);
+        for (int k = 0; k <= N / 2; k++) {
+            result += Math.pow(-1, k) * Math.pow(x, (2 * k) + 1) / fact((2 * k) + 1, 1);
+        }
         return result;
     }
 }

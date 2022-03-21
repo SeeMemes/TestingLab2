@@ -3,8 +3,8 @@ package functions;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import equations.functions.Cosine;
+import equations.functions.Cot;
 import equations.functions.Sine;
-import equations.functions.Tan;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -18,8 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class TanTest {
-    private static Tan tan = mock(Tan.class);
+public class CotTest {
+    private static Cot cot = mock(Cot.class);
     private static Sine sin = new Sine();
     private static Cosine cos = new Cosine();
 
@@ -30,7 +30,7 @@ public class TanTest {
             for (String[] record : records) {
                 final double x = Double.parseDouble(record[0]);
                 final double y = Double.parseDouble(record[1]);
-                when(tan.apply(x)).thenReturn(y);
+                when(cot.apply(x)).thenReturn(y);
             }
         } catch (FileNotFoundException e) {
             System.err.println("Файл не найден\n");
@@ -41,24 +41,10 @@ public class TanTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource( files={ "tan_table.csv" } )
-    public void testTan( double x, double expectedY ) {
-        final double tanDelta = 0.4;
-        assertEquals( expectedY, tan.apply( x ), tanDelta );
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(files = {"cos_table.csv"})
-    public void testCosnoDelta (double x, double expectedY) {
-        final double cosDelta = 0.0;
-        assertEquals( expectedY, cos.apply( x ), cosDelta );
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(files = {"sin_table.csv"})
-    public void testSinnoDelta (double x, double expectedY) {
-        final double sinDelta = 0.0;
-        assertEquals( expectedY, sin.apply( x ), sinDelta );
+    @CsvFileSource( files={ "cot_table.csv" } )
+    public void testCotwDelta( double x, double expectedY ) {
+        final double cotDelta = 0.4;
+        assertEquals( expectedY, cot.apply( x ), cotDelta );
     }
 
     @ParameterizedTest
@@ -71,7 +57,7 @@ public class TanTest {
     @ParameterizedTest
     @CsvFileSource(files = {"sin_table.csv"})
     public void testSinwDelta (double x, double expectedY) {
-        final double sinDelta = 0.082005;
+        final double sinDelta = 0.09;
         assertEquals( expectedY, sin.apply( x ), sinDelta );
     }
 }

@@ -1,14 +1,16 @@
-functions/SineTest.java
- functions.SineTest
 functions/NaturalLogarithmTest.java
  functions.NaturalLogarithmTest
 functions/RandomLogarithmTest.java
  functions.RandomLogarithmTest
-functions/CosineTest.java
- functions.CosineTest
 functions/TanTest.java
  functions.TanTest
-EquationSystemTest.java
- EquationSystemTest
+functions/CotTest.java
+ functions.CotTest
+functions/CosineTest.java
+ functions.CosineTest
 functions/SecantTest.java
  functions.SecantTest
+functions/SineTest.java
+ functions.SineTest
+EquationSystemTest.java
+ EquationSystemTest

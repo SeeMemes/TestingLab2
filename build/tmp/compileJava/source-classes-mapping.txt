@@ -1,18 +1,20 @@
 utils/exceptions/LogarithmDegreeException.java
  utils.exceptions.LogarithmDegreeException
-equations/functions/Sine.java
- equations.functions.Sine
-utils/CSVBuilder.java
- utils.CSVBuilder
-equations/functions/Tan.java
- equations.functions.Tan
-equations/functions/NaturalLogarithm.java
- equations.functions.NaturalLogarithm
 equations/functions/RandomLogarithm.java
  equations.functions.RandomLogarithm
-equations/EquationSystem.java
- equations.EquationSystem
-equations/functions/Cosine.java
- equations.functions.Cosine
+utils/CSVBuilder.java
+ utils.CSVBuilder
+equations/functions/NaturalLogarithm.java
+ equations.functions.NaturalLogarithm
+equations/functions/Sine.java
+ equations.functions.Sine
 equations/functions/Secant.java
  equations.functions.Secant
+equations/functions/Tan.java
+ equations.functions.Tan
+equations/functions/Cot.java
+ equations.functions.Cot
+equations/functions/Cosine.java
+ equations.functions.Cosine
+equations/EquationSystem.java
+ equations.EquationSystem
